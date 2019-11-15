@@ -58,3 +58,5 @@ https://science.mnhn.fr/institution/mnhn/collection/im/item/2007-34878
 
 Specimen ID: MNHN-IM-2007-34878 / KJ550376 / AJ409610
 
+http://treatment.plazi.org/id/24768796-CD1F-FFC6-FDED-1609FD27FE12
+
