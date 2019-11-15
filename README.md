@@ -8,6 +8,11 @@ Natural history collections held in museums preserve and archive various types o
 
 "A persistent identifier (PI or PID) is a long-lasting reference to a document, file, web page, or other object. The term "persistent identifier" is usually used in the context of digital objects that are accessible over the Internet"
 
+# Use case 
+
+"“Which specimens have associated sequences in GenBank?” 
+
+"Can I track down all the specimens in this paper"? 
 
 # Physical Specimens 
 
