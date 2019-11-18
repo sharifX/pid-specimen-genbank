@@ -95,10 +95,11 @@ FT                   /gene="16S rRNA"
 FT                   /product="16S ribosomal RNA"
 ```
 
-After some manual investigation we find this: https://bioportal.naturalis.nl/specimen/RMNH.CRUS.D.38033
+After some manual investigation (via gbif record https://www.gbif.org/occurrence/2434390604) we find this: 
+
+https://bioportal.naturalis.nl/specimen/RMNH.CRUS.D.38033
 
 Looks like the ENA record is missing the full physical specimen id. How can we do this in a more efficient way? 
-
 
 # Digital Specimen 
 
@@ -116,10 +117,7 @@ curl -s -X GET http://145.136.243.81:8080/objects/test/7ae4c781214bda021013|jq
 }
 ```
 
-
-
 ## Can I track down all the specimens in this paper? 
-
 
 
 ZENODO 
