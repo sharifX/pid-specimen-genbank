@@ -46,7 +46,7 @@ RMNH D 38033
 RMNH:MOL:256470
 RMNH:MOL:47312
 ````
-## Search in the ENA database 
+### Search in the ENA database 
 
 String search "RMNH*". We only grab a few fields and the first 5 records in tsv format. 
 ```
@@ -101,7 +101,7 @@ https://bioportal.naturalis.nl/specimen/RMNH.CRUS.D.38033
 
 Looks like the ENA record is missing the full physical specimen id. How can we do this in a more efficient way? 
 
-# Digital Specimen 
+### Digital Specimen 
 
 Only if we had a digital object connecting all these links:  
 
@@ -119,17 +119,50 @@ curl -s -X GET http://145.136.243.81:8080/objects/test/7ae4c781214bda021013|jq
 
 ## Can I track down all the specimens in this paper? 
 
+Tenorio, Manuel J. & Castelin, Magalie, 2016, Genus Profundiconus Kuroda, 1956 (Gastropoda, Conoidea): Morphological and molecular studies, with the description of five new species from the Solomon Islands and New Caledonia, European Journal of Taxonomy 173, pp. 1-45: 19-21
 
-ZENODO 
-http://doi.org/10.5281/zenodo.1210134
+http://dx.doi.org/10.5852/ejt.2016.173
 
-treatment / plazi 
-https://doi.org/10.5852/ejt.2016.173
+Plazi link: http://treatment.plazi.org/id/24768796-CD1F-FFC6-FDED-1609FD27FE12
 
+RDF LINK http://treatment.plazi.org/id/24768796-CD1F-FFC6-FDED-1609FD27FE12.rdf 
+
+
+This uses darwin core terms 
+```
+grep 'dwc:specimenCode>' 24768796-CD1F-FFC6-FDED-1609FD27FE12.rdf 
+<dwc:specimenCode>IM-2007-34878</dwc:specimenCode>
+<dwc:specimenCode>IM-2007-30935</dwc:specimenCode>
+<dwc:specimenCode>IM-2007-30338</dwc:specimenCode>
+<dwc:specimenCode>IM-2007- 34880</dwc:specimenCode>
+<dwc:specimenCode>IM-2007-34879</dwc:specimenCode>
+
+grep 'dwc:httpUri' 24768796-CD1F-FFC6-FDED-1609FD27FE12.rdf 
+<dwc:httpUri>http://coldb.mnhn.fr/catalognumber/mnhn/im/2007-34878</dwc:httpUri>
+<dwc:httpUri>http://coldb.mnhn.fr/catalognumber/mnhn/im/2007-30935</dwc:httpUri>
+<dwc:httpUri>http://coldb.mnhn.fr/catalognumber/mnhn/im/2007-30338</dwc:httpUri>
+<dwc:httpUri>http://coldb.mnhn.fr/catalognumber/mnhn/im/2007-34880</dwc:httpUri>
+<dwc:httpUri>http://coldb.mnhn.fr/catalognumber/mnhn/im/2007-34879</dwc:httpUri>
+
+```
+
+Other identifications 
+
+```
+grep 'dwc:accessionNumber' 24768796-CD1F-FFC6-FDED-1609FD27FE12.rdf 
+<dwc:accessionNumber>KJ550352</dwc:accessionNumber>
+```
+
+Reading the pdf we also find several BOLD process ids which takes us to the barcode number (BIN) 
+
+http://www.boldsystems.org/index.php/Public_RecordView?processid=CONO296-08 
+
+
+```
+processid	sampleid	recordID	catalognum	fieldnum	institution_storing	collection_code	bin_uri	phylum_taxID	phylum_name	class_taxID	class_name	order_taxID	order_name	family_taxID	family_name	subfamily_taxIsubfamily_name	genus_taxID	genus_name	species_taxID	species_name	subspecies_taxID	subspecies_name	identification_provided_by	identification_method	identification_reference	tax_note	voucher_status	tissue_type	collection_event_id	collectors	collectiondate_start	collectiondate_end	collectiontime	collection_note	site_code	sampling_protocol	lifestage	sex	reproduction	habitat	associated_specimens	associated_taxa	extrainfo	notes	lat	lon	coord_source	coord_accuracy	elev	depth	elev_accuracy	depth_accuracy	country	province_state	region	sector	exactsite	image_ids	image_urls	media_descriptors	captions	copyright_holders	copyright_years	copyright_licenses	copyright_institutions	photographers
+CONO296-08	MNHN-IM-2007-17921	723406	MNHN_MOLL_17921	Panglao 05_96	Museum National d'Histoire Naturelle, Paris		BOLD:AAD3581	23	Mollusca	92	Gastropoda	84899	Neogastropoda	866	Conidae			1900	Conus	126909	Conus orbignyi			Nicolas Puillandre		Audouin, 1831					MNHN/IRD	FAO-71		9.49	123.74	
+```
+
+We need to link: 
+Specimen ID: MNHN-IM-2007-34878 / KJ550376 / AJ409610 / CONO296-08 
 https://science.mnhn.fr/institution/mnhn/collection/im/item/2007-34878
-
-Specimen ID: MNHN-IM-2007-34878 / KJ550376 / AJ409610
-
-http://treatment.plazi.org/id/24768796-CD1F-FFC6-FDED-1609FD27FE12
-
-RDF LINK: http://tb.plazi.org/GgServer/rdf/24768796-CD1F-FFC6-FDED-1609FD27FE12 
