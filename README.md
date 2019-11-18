@@ -70,6 +70,10 @@ How can I verify that these records are indeed currently housed in the Naturalis
 
 EMBL record details https://www.ebi.ac.uk/ena/browser/api/embl/AM076944.1?lineLimit=1000
 
+
+OLD ENA browser https://www.ebi.ac.uk/ena/data/view/AM076944
+
+
 ```
 RN   [2]
 RA   Cleva R., Van Wormhoudt A.E.;
