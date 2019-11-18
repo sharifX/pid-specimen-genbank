@@ -164,5 +164,20 @@ CONO296-08	MNHN-IM-2007-17921	723406	MNHN_MOLL_17921	Panglao 05_96	Museum Nation
 ```
 
 We need to link: 
-Specimen ID: MNHN-IM-2007-34878 / KJ550376 / AJ409610 / CONO296-08 
+Specimen ID: MNHN-IM-2007-34878 / KJ550376 / AJ409610 / CONO1409-14
 https://science.mnhn.fr/institution/mnhn/collection/im/item/2007-34878
+
+http://www.boldsystems.org/index.php/Public_RecordView?processid=CONO1409-14
+
+
+
+```
+{
+  "id": "test/cae42177c14a8fcdeb14",
+  "scientificName": "Profundiconus maribelae",
+  "physicalSpecimenId": "MNHN-IM-2007-34878",
+  "stableIdentifier": "https://science.mnhn.fr/institution/mnhn/collection/im/item/2007-34878",
+  "accession": "https://identifiers.org/ena.embl:AJ409610",
+  "tax_id": "https://identifiers.org/taxonomy:58944"
+  "BIN" : "http://www.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAO3751"
+}
