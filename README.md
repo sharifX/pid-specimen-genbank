@@ -2,6 +2,8 @@
 
 # Introduction 
 
+To see the APIs in action use the notebook: https://github.com/sharifX/pid-specimen-genbank/blob/master/specimen-pid-genbank.ipynb
+
 A page to demonstrate various identifiers and linkages. 
 
 Natural history collections held in museums preserve and archive various types of biological and geological specimens that provide a physical record of the biodiversity in the natural world. Together, these specimens and associated data (such as publications and molecular sequence data) represent an unparalleled resource to study the world's biodiversity. However, the current ecosystem of specimens and collection management globally is highly fragmented with discipline-specific data and metadata standards and institutional repositories. A consistent and sustainable approach to linking these physical specimens with other identifiable entities is then crucial for findability, accessibility, interoperability, and reproducibility i.e., achieving data ‘FAIRness’. 
